@@ -1,0 +1,80 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/style.css">
+        <script src="../scripts/script.js" defer></script>
+    </head>
+    <body>
+<!-- --------------------------------------------------------------------------------------------------- -->
+        <nav class="navbar bg-body-tertiary"> <!--navbar-->
+            <div class="container-fluid"> <!--container-navbar-->
+                <a class="navbar-brand" href="#">
+                    <!--logo kamarkita-->
+                <div class="d-flex gap-1 container-fluid">
+                        <img src="../images/logomobile.png" alt="Logo" width="40" height="35" class="d-inline-block align-text-top">
+                    </a>
+                    <!-- search bar -->
+                    <input class="form-control" type="search" placeholder="Cari penginapan..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <img src="../images/icon-search.png" alt="search">
+                    </button>
+                    <!-- icon CS -->
+                    <a class="navbar-brand" href="#">
+                        <img src="../images/headset_mic.svg" alt="Logo" width="40" height="35" class="d-inline-block align-text-top">
+                    </a>
+                </div>   
+            </div>
+        </nav>
+<!-- ---------------------------------------------------------------------------------------------------- -->
+        <!--wallpaper carousel-->
+        <div class="container-wallpaper container">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000"> <!--image 1-->
+                    <img src="../images/image1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000"> <!--image 2-->
+                    <img src="../images/image2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!--image 3-->
+                    <img src="../images/image3.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+    </html>
