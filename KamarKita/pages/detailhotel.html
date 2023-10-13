@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Detail Hotel</title>
+    <link rel="stylesheet" href="detailhotel.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#2563EB',
+                        pressed: '#1E3A8A',
+                        mediumlow: '#9E9494',
+                    },
+                    fontFamily: {
+                        inter: ['Inter'],
+                    },
+                    maxHeight: {
+                        '128': '32rem',
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('/KamarKita/images/detailhotel3.png')",
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/7cec596d4d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="display : flex  p-5 bg-white shadow-2xl items-center fixed top-0 left-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="fill-main" height="1.6em"
+            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+        </svg>
+        <div class=" text-main w-full  text-center font-inter font-medium">
+            <h1>Informasi Hotel</h1>
+        </div>
+    </nav>
+
+    <section>
+        <img class="w-full max-h-128" src="/KamarKita/images/gambar-utama.png" alt="">
+        <div class="flex gap-2">
+            <div class="w-1/3">
+
+                <img class="w-full" src="/KamarKita/images/detailhotel1.png" alt="">
+            </div>
+            <div class="w-1/3">
+                <img class="w-full" src="/KamarKita/images/detailhotel2.png" alt="">
+            </div>
+            <div
+                class="w-1/3 bg-[url('/KamarKita/images/detailhotel3.png')] bg-cover flex justify-center items-center text-center text-white">
+                <a href="">Lihat Lainnya</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="m-6 font-iner">
+            <h1 class=" text-3xl text-pressed font-bold">Hotel Ibis Senen</h1>
+            <h2 class="text-xl pt-2 text-mediumlow">Jakarta Barat</h2>
+            <h1 class="text-2xl font-bold pt-4">Ringkasan</h1>
+            <p class="pt-2">Ibis adalah jaringan hotel yang dikelola oleh AccorHotels, sebuah perusahaan grup hotel
+                terkemuka di dunia.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="m-6 font-Iner">
+            <h2 class="text-2xl font-bold">Lokasi Hotel</h2>
+            <div>
+                <iframe class="mt-6"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6069035650057!2d106.8399851748354!3d-6.183333460585156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f449ca685b31%3A0x5e46ab4ee1518ea2!2sHotel%20Ibis%20-%20Senen!5e0!3m2!1sid!2sid!4v1697186521837!5m2!1sid!2sid"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="mt-6 ml-6 font-iner">
+            <h1 class="text-2xl font-bold">Fasilitas</h1>
+        </div>
+        <div class="ml-12 mt-2">
+            <ul class="list-disc font-semibold">
+                <li> Gratis Wifi</li>
+                <li> Gratis Parkir</li>
+                <li> Termasuk Sarapan</li>
+                <li> Kolam Renang</li>
+                <li> Ruang Meeting</li>
+                <li> Ruang Smooking</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="m-6 text-iner">
+            <h2 class="text-2xl font-bold">Penilaian</h2>
+        </div>
+        <div class="border-gray-400">
+            
+        </div>
+    </section>
+</body>
+
+</html>
