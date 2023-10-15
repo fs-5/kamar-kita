@@ -36,3 +36,12 @@ buttonKostan.addEventListener("click", () => {
   buttonVilla.classList.add("bg-white", "text-blue-500");
 });
 
+
+// pop up CS
+document.getElementById('headsetIcon').addEventListener('click', function() {
+  document.querySelector('.popup').style.display = 'flex';
+});
+
+document.getElementById('closePopup').addEventListener('click', function() {
+  document.querySelector('.popup').style.display = 'none';
+});
