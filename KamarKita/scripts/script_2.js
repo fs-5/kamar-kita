@@ -1,5 +1,5 @@
 // pop up
-function btnLogin() {
+function btnLogin(event) {
   let btnModal = document.getElementById('btnModal');
   let formLogin = document.getElementById('formLogin');
   btnModal.classList.remove('hidden');
@@ -7,13 +7,16 @@ function btnLogin() {
   btnModal.classList.add('oppacity-100');
   formLogin.classList.add('hidden');
   event.preventDefault();
+
+  let email = document.getElementById('email').value;
+  let pass = document.getElementById('pass').value;
 }
 
 function btnPageLogin() {
   window.location.replace('index.html');
 }
 
-function btnRegis() {
+function btnRegis(event) {
   let modal = document.getElementById('modal');
   let formRegis = document.getElementById('formRegis');
   modal.classList.remove('hidden');
