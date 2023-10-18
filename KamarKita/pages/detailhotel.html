@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Detail Hotel</title>
+    <link rel="stylesheet" href="/KamarKita/styles/detailhotel.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#2563EB',
+                        pressed: '#1E3A8A',
+                        mediumlow: '#9E9494',
+                    },
+                    fontFamily: {
+                        inter: ['Inter'],
+                    },
+                    maxHeight: {
+                        '128': '35rem',
+                    },
+                    maxWidth: {
+                        '128': '35rem',
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('/KamarKita/images/hotelibis3.jpg')",
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/7cec596d4d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="display : flex  p-5 bg-white shadow-2xl items-center fixed top-0 left-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="fill-main" height="1.6em"
+            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+        </svg>
+        <div class=" text-main w-full  text-center font-inter font-medium">
+            <h1>Informasi Hotel</h1>
+        </div>
+    </nav>
+
+    <section>
+
+        <img class="image w-full max-h-128 cursor-pointer" src="/KamarKita/images/hotelibis.jpg" alt="">
+        <div
+            class="popup-image fixed top-0 left-0 bg-black bg-opacity-90 h-screen w-full z-50 flex justify-center items-center">
+            <span
+                class="mt-36 md:mt-0 absolute top-0 right-4 text-2xl font-bold text-white cursor-pointer z-50">&times;</span>
+            <img class="mt-36 md:m-auto md:mt-36 max-h-full md:max-w-xl" src="" alt="" id="popupImage">
+        </div>
+
+
+
+        <div class="flex gap-2">
+            <div class="w-1/3">
+
+                <img class="w-full cursor-pointer" src="/KamarKita/images/hotelibis1.jpg" alt="">
+            </div>
+            <div class="w-1/3">
+                <img class="w-full cursor-pointer" src="/KamarKita/images/hotelibis6.jpg" alt="">
+            </div>
+            <div
+                class="w-1/3 bg-[url('/KamarKita/images/hotelibis3.jpg')] bg-cover flex justify-center items-center text-center text-white">
+                <a href=""
+                    class="lain text-blue-600 px-4 rounded-full font-normal bg-opacity-75 p-1 text-xs hover:text-blue-900 active:text-blue-900 md:text-xl">Lihat
+                    Lainnya</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="m-6 font-iner">
+            <h1 class=" text-3xl text-pressed font-bold">Hotel Ibis Senen</h1>
+            <h2 class="text-xl pt-2 text-mediumlow">Jakarta Barat</h2>
+            <h1 class="text-2xl font-bold pt-4">Ringkasan</h1>
+            <p class="pt-2 text-justify">Pelayanan memuaskan serta fasilitas hotel yang memadai akan membuat Anda nyaman
+                berada di ibis Jakarta Senen.
+                Resepsionis siap 24 jam untuk melayani proses check-in, check-out dan kebutuhan Anda yang lain. Jangan
+                ragu untuk menghubungi resepsionis, kami siap melayani Anda.
+                ibis Jakarta Senen adalah akomodasi dengan fasilitas baik dan kualitas pelayanan memuaskan menurut
+                sebagian besar tamu.
+                Dengan fasilitas yang memadai, ibis Jakarta Senen menjadi pilihan yang tepat untuk menginap.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="m-6 font-Iner">
+            <h2 class="text-2xl font-bold">Lokasi Hotel</h2>
+            <div>
+                <iframe class="mt-6"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6069035650057!2d106.8399851748354!3d-6.183333460585156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f449ca685b31%3A0x5e46ab4ee1518ea2!2sHotel%20Ibis%20-%20Senen!5e0!3m2!1sid!2sid!4v1697186521837!5m2!1sid!2sid"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="mt-6 ml-6 font-iner">
+            <h1 class="text-2xl font-bold">Fasilitas</h1>
+        </div>
+        <div class="ml-12 mt-2">
+            <ul class="list-disc font-semibold">
+                <li> Gratis Wifi</li>
+                <li> Gratis Parkir</li>
+                <li> Termasuk Sarapan</li>
+                <li> Kolam Renang</li>
+                <li> Ruang Meeting</li>
+                <li> Ruang Smooking</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="m-6">
+        <div class="text-iner mb-4">
+            <h2 class="text-2xl font-bold">Penilaian</h2>
+        </div>
+        <div
+            class="border-2 border-pressed p-4 flex rounded-xl flex-col md:flex md:flex-row md:flex-wrap md:justify-center ">
+            <div class="flex mb-4 p-3 border-pressed border-2 rounded-xl hover:shadow-lg md:basis-5/12 md:mx-auto">
+                <div class=" justify-start">
+                    <img src="/KamarKita/images/avatar1.png" alt="">
+                </div>
+
+                <div class="pl-4">
+                    <h1 class="text-lg font-semibold text-pressed">Ririn Widyastuti</h1>
+                    <div class="flex fill-orange-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.6 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z" />
+                        </svg>
+                    </div>
+                    <p class="text-xs">Wah Tempatnya Bersih, <br>Kasurnya nyaman. Keren!</p>
+                </div>
+            </div>
+            <div class="flex mb-4 p-3 border-pressed border-2 rounded-xl hover:shadow-lg md:basis-5/12 md:mx-auto">
+                <div class=" justify-start">
+                    <img src="/KamarKita/images/avatar2.png" alt="">
+                </div>
+
+                <div class="pl-4">
+                    <h1 class="text-lg font-semibold text-pressed">Jalil Uciha</h1>
+                    <div class="flex fill-orange-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.6 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z" />
+                        </svg>
+                    </div>
+                    <p class="text-xs">Wah Tempatnya Bersih, <br>Kasurnya nyaman. Keren!</p>
+                </div>
+            </div>
+            <div class="flex mb-4 p-3 border-pressed border-2 rounded-xl hover:shadow-lg basis-5/12 md:mx-auto">
+                <div class=" justify-start">
+                    <img src="/KamarKita/images/avatar3.png" alt="">
+                </div>
+
+                <div class="pl-4">
+                    <h1 class="text-lg text-pressed font-semibold">Sakti Ki Ampuh</h1>
+                    <div class="flex fill-orange-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+
+                    </div>
+                    <p class="text-xs">Wah Tempatnya Bersih, <br>Kasurnya nyaman. Keren!</p>
+                </div>
+            </div>
+            <div class="flex mb-4 p-3 border-pressed border-2 rounded-xl hover:shadow-md md:basis-5/12 md:mx-auto">
+                <div class=" justify-start">
+                    <img src="/KamarKita/images/avatar4.png" alt="">
+                </div>
+
+                <div class="pl-4">
+                    <h1 class="text-lg text-pressed font-semibold">Anand azaah</h1>
+                    <div class="flex fill-orange-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.7em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+
+                    </div>
+                    <p class="text-xs">Wah Tempatnya Bersih, <br>Kasurnya nyaman. Keren!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-pressed bg-blue-950 mb-10">
+        <div class="flex justify-center text-center bg-pressed text-white font-inter p-4 pb-32">
+            <h1 class="pt-10">Created By : Kelompok 5 <br>
+                Adam, Rizki, Anand</h1>
+        </div>
+    </footer>
+
+    <section class="fixed bottom-0 left-0 right-0 bg-white ">
+        <div class="flex justify-center flex-col p-2 md:flex md:flex-row">
+            <button
+                class="border-2 bg-pressed text-white p-2 w-full my-2 mx-auto rounded-xl md:mx-2 md:w-4/12 hover:bg-blue-950 active:bg-blue-950"><a
+                    href="#">Pesan Sekarang</a></button>
+            <button
+                class="border-2 bg-white text-white p-2 w-full my-2 mx-auto rounded-xl md:mx-2 md:w-4/12 hover:bg-gray-200 active:bg-gray-200"><a
+                    class="text-main" href="#">Simpan Dulu</a></button>
+        </div>
+    </section>
+    <script src="/KamarKita/scripts/detailhotel.js"></script>
+</body>
+
+</html>

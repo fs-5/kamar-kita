@@ -1,4 +1,4 @@
-// // button hote, vila, kostan
+// button hote, vila, kostan
 const buttonHotel = document.getElementById('buttonHotel');
 const buttonVilla = document.getElementById('buttonVilla');
 const buttonKostan = document.getElementById('buttonKostan');
