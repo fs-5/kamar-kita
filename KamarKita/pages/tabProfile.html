@@ -1,570 +1,181 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KamarKita</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../scripts/homepage.js" defer></script>
-</head>
+  </head>
 
-<body>
-    <!-- index.html adalah Landing page -->
+  <body>
+    <!-- ini adalah order page -->
 
     <!--container pembungkus-->
     <main>
       <!-- container body/main -->
       <div class="container mx-auto sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px]">
-        <!-- navbar -->
-        <div class="flex gap-2 w-full mx-auto p-1 justify-between items-center bg-white drop-shadow-md mb-1">
+        <!-- navbar info -->
+        <div class="w-full flex bg-white font-medium text-blue-500 p-[20px] justify-center items-center drop-shadow-lg mb-1">
           <div>
-            <!--logo kamarkita-->
-            <img class="bg-white" src="../images/logo-kamarkita.svg" alt="logo" />
+            <h1>Info Profil Anda</h1>
           </div>
+        </div>
+        <!-- batas -->
 
-                <div>
-                  <!-- search bar-->
-                  <div class="flex gap-1 w-full">
-                    <input
-                      class="w-full sm:w-[400px] h-[40px] p-3 rounded-[10px] border-[1px] border-blue-500 focus:outline-none focus:border-yellow-500"
-                      type="search" name="search" id="search" placeholder="Cari disini..." />
-                    <button id="btn-search"
-                      class="active:bg-blue-200 fill-blue-500 bg-white p-2 rounded-[10px] border-[1px] border-blue-500">
-                      <!--icon search-->
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path
-                          d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                <!-- icon headset CS -->
-                <div id="headsetIcon" class="cursor-pointer fill-blue-500 p-2 bg-white">
-                  <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+        <!-- profile -->
+        <div class="profile container mx-auto">
+          <div class="w-[110px] bg-blue-900 my-[30px] p-[30px] rounded-full justify-center items-center mx-auto flex">
+            <svg class="w-[50px] fill-white" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 448 512">
+              <path
+                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+              />
+            </svg>
+          </div>
+          <!-- form -->
+          <div class="flex flex-col sm:gap-4 gap-[20px] w-full px-[20px] py-[20px]">
+            <form class="sm:grid sm:grid-cols-2 sm:gap-4" id="form-profile" action="" method="post">
+              <!-- field username -->
+              <div class="container flex flex-col mb-[20px]">
+                <label class="mb-[10px]" for="username">Username</label>
+                <div class="flex items-center gap-3 border-[1px] border-gray-600 p-[10px] rounded-[10px]">
+                  <svg class="ml-[10px]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
                     <path
-                      d="M256 48C141.1 48 48 141.1 48 256v40c0 13.3-10.7 24-24 24s-24-10.7-24-24V256C0 114.6 114.6 0 256 0S512 114.6 512 256V400.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24H240c-26.5 0-48-21.5-48-48s21.5-48 48-48h32c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40V256c0-114.9-93.1-208-208-208zM144 208h16c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H144c-35.3 0-64-28.7-64-64V272c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64v48c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V240c0-17.7 14.3-32 32-32h16z" />
+                      d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"
+                    />
                   </svg>
-                </div>
-                </div>
-
-            <!-- pembungkus header -->
-            <div class="gap-3 sm:items-center sm:flex sm:w-full">
-              <!--carousel wallpaper-->
-              <section class="sm:w-[60%]">
-                <div class="carousel w-full bg-blue-200 sm:bg-white py-3">
-                  <div id="item1" class="carousel-item w-full">
-                    <img src="../images/image1.jpg" class="object-cover w-full h-[350px] md:h-[400px] px-[15px] sm:px-[0]" />
-                  </div>
-                  <div id="item2" class="carousel-item w-full">
-                    <img src="../images/image2.jpg" class="object-cover w-full h-[350px] md:h-[400px] px-[15px] sm:px-[0]" />
-                  </div>
-                  <div id="item3" class="carousel-item w-full">
-                    <img src="../images/image3.jpg" class="object-cover w-full h-[350px] md:h-[400px] px-[15px] sm:px-[0]" />
-                  </div>
-                  <div id="item4" class="carousel-item w-full">
-                    <img src="../images/image4.jpg" class="object-cover w-full h-[350px] md:h-[400px] px-[15px] sm:px-[0]" />
+                  <div class="w-full">
+                    <input class="focus:outline-none text-black py-[5px] px-[10px] w-full" type="text" name="username" id="username"
+                      placeholder="Username" />
                   </div>
                 </div>
-                <div class="flex justify-center w-full pt-[5px] pb-[15px] sm:pt-[5px] gap-2 bg-blue-200 sm:bg-white">
-                  <a href="#item1" class="btn btn-md rounded-full">1</a>
-                  <a href="#item2" class="btn btn-md rounded-full">2</a>
-                  <a href="#item3" class="btn btn-md rounded-full">3</a>
-                  <a href="#item4" class="btn btn-md rounded-full">4</a>
-                </div>
-              </section>
-            
-              <!-- lokasi -->
-              <section class="sm:w-[40%]">
-                <div class="flex flex-col items-center mx-auto container w-full p-[10px] text-white gap-2 ">
-                  <img class="hidden sm:block" src="../images/Frame 117.png" alt="kamarkita">
-                  <h2 class="text-blue-500">Lokasi anda saat ini :</h2>
-                  <button
-                    class="w-full justify-center items-center border-[1px] border-blue-500 py-[10px] rounded-[10px] flex gap-2 bg-blue-500">
-                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
-                      <path
-                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                    </svg>
-                    Kota Jakarta Timur
-                  </button>
-                </div>
-                <!-- button fitur maping -->
-                <section class="container pb-[10px] flex flex-col justify-center items-center mx-auto w-full">
-                  <h1 class="py-[10px]">Mau menginap dimana ?</h1>
-                  <div class="flex w-full gap-5 p-[10px] text-lg bg-blue-300 sm:bg-white items-center justify-center">
-                    <button id="buttonHotel"
-                      class="hover:bg-blue-800 py-[15px] w-[100px] border-blue-500 border-[1px] bg-white rounded-[10px] text-blue-500">
-                      Hotel
-                    </button>
-                    <button id="buttonVilla"
-                      class="hover:bg-blue-800 py-[15px] w-[100px] border-blue-500 border-[1px] bg-white rounded-[10px] text-blue-500">
-                      Villa
-                    </button>
-                    <button id="buttonKostan"
-                      class="hover:bg-blue-800 py-[15px] w-[100px] border-blue-500 border-[1px] bg-white rounded-[10px] text-blue-500">
-                      Kostan
-                    </button>
-                  </div>
-                </section>
-                </section>
-                </div>
-
-                <!-- Popup -->
-                <div class="popup fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 justify-center items-center hidden">
-                  <div class="bg-white p-8 rounded-[10px] shadow-lg w-[400px] items-center justify-center">
-                    <p class="pl-[100px] mb-4 font-bold text-blue-800">Memiliki keluhan ?</p>
-                    <img class="mx-auto" src="../images/customerservice.png" alt="CS">
-                    <p class="mb-4 pl-[90px]">Silakan hubungi kami.
-                    </p>
-                    <!-- button 2 -->
-                    <div class="flex justify-between items-center gap-3">
-                      <a href="https://api.whatsapp.com/send?phone=081322459256" target="_blank"
-                        class="bg-blue-500 hover:bg-blue-700 text-white w-[160px]  py-2 px-4 rounded-lg">Customer Service</a>
-                      <button id="closePopup" class="bg-red-500 hover:bg-red-700 text-white w-[160px]  py-2 px-4 rounded-lg">Nanti
-                        Saja</button>
-                    </div>
-                  </div>
-                </div>
-
-            <!-- card & link selanjutnya...1 -->
-            <section class="mb-[20px]">
-              <!-- link selanjutnya -->
-              <div class="w-full text-lg font-sans bg-blue-500 text-white px-[20px] py-[10px]">
-                <a href="#" id="more" class="justify-between flex items-center">
-                  <div class="text"> <!--text-->
-                    <p>Recomendasi Penginapan untuk anda</p>
-                  </div>
-                  <div class="icon"> <!--icon-->
-                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
-                      <path
-                        d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                    </svg>
-                  </div>
-                </a>
               </div>
-              <!-- card list -->
-              <div class="flex gap-5 p-[20px] container overflow-x-auto">
-                <!-- card-1 -->
-                <a href="#"
-                  class=" gap-[20px] w-[300px] h-[auto] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                  <img
-                    class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                    src="../images/ibis1.jpg" alt="image-ibis">
-                  <!-- text judul -->
-                  <div class="mb-[10px] gap-2">
-                    <h1 class="text-blue-800 text-xl font-bold">
-                      Hotel Ibis
-                    </h1>
-                    <h5>
-                      Senen, Jakarta Pusat.
-                    </h5>
+              <!-- field email -->
+              <div class="container flex flex-col mb-[20px]">
+                <label class="mb-[10px]" for="email">Email</label>
+                <div class="flex items-center gap-3 border-[1px] border-gray-600 p-[10px] rounded-[10px]">
+                  <svg class="ml-[10px]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <path
+                      d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                    />
+                  </svg>
+                  <div class="w-full">
+                    <input class="focus:outline-none text-black py-[5px] px-[10px] w-full" type="email" name="email" id="email"
+                      placeholder="contoh@gmail.com" />
                   </div>
-                  <!-- rating -->
-                  <div class="mb-[10px]">
-                    <div>⭐⭐⭐⭐</div>
-                  </div>
-                  <!-- harga -->
-                  <div class="flex gap-1 items-center md:text-sm">
-                    <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                    <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                  </div>
-                </a>
-
-                    <!-- card-2 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-
-                    <!-- card-3 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-
-                    <!-- card-4 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-                    </div>
-                    </section>
-                    <!-- batas sesi card 1-->
-
-            <!-- card & link selanjutnya...2 -->
-            <section class="mb-[20px]">
-              <!-- link selanjutnya -->
-              <div class="w-full text-lg font-sans bg-blue-500 text-white px-[20px] py-[10px]">
-                <a href="#" id="more" class="justify-between flex items-center">
-                  <div class="text"> <!--text-->
-                    <p>Recomendasi Penginapan untuk anda</p>
-                  </div>
-                  <div class="icon"> <!--icon-->
-                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
-                      <path
-                        d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                    </svg>
-                  </div>
-                </a>
+                </div>
               </div>
-              <!-- card list -->
-              <div class="flex gap-5 p-[20px] container overflow-x-auto">
-                <!-- card-1 -->
-                <a href="#"
-                  class=" gap-[20px] w-[300px] h-[auto] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                  <img
-                    class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                    src="../images/ibis1.jpg" alt="image-ibis">
-                  <!-- text judul -->
-                  <div class="mb-[10px] gap-2">
-                    <h1 class="text-blue-800 text-xl font-bold">
-                      Hotel Ibis
-                    </h1>
-                    <h5>
-                      Senen, Jakarta Pusat.
-                    </h5>
+              <!-- field no hp -->
+              <div class="container flex flex-col mb-[20px]">
+                <label class="mb-[10px]" for="noHP">No Hp/Telepon</label>
+                <div class="flex items-center gap-3 border-[1px] border-gray-600 p-[10px] rounded-[10px]">
+                  <svg class="ml-[10px]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                    <path
+                      d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM224 448a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM304 64H80V384H304V64z" />
+                  </svg>
+                  <div class="w-full">
+                    <input class="focus:outline-none text-black py-[5px] px-[10px] w-full" type="number" name="noHP" id="noHP"
+                      placeholder="081234567890" />
                   </div>
-                  <!-- rating -->
-                  <div class="mb-[10px]">
-                    <div>⭐⭐⭐⭐</div>
-                  </div>
-                  <!-- harga -->
-                  <div class="flex gap-1 items-center md:text-sm">
-                    <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                    <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                  </div>
-                </a>
-
-                    <!-- card-2 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-
-                    <!-- card-3 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-
-                    <!-- card-4 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-                    </div>
-                    </section>
-                    <!-- batas sesi card 2-->
-
-            <!-- card & link selanjutnya...3 -->
-            <section class="mb-[20px]">
-              <!-- link selanjutnya -->
-              <div class="w-full text-lg font-sans bg-blue-500 text-white px-[20px] py-[10px]">
-                <a href="#" id="more" class="justify-between flex items-center">
-                  <div class="text"> <!--text-->
-                    <p>Recomendasi Penginapan untuk anda</p>
-                  </div>
-                  <div class="icon"> <!--icon-->
-                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
-                      <path
-                        d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                    </svg>
-                  </div>
-                </a>
+                </div>
               </div>
-              <!-- card list -->
-              <div class="flex gap-5 p-[20px] container overflow-x-auto">
-                <!-- card-1 -->
-                <a href="#"
-                  class=" gap-[20px] w-[300px] h-[auto] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                  <img
-                    class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                    src="../images/ibis1.jpg" alt="image-ibis">
-                  <!-- text judul -->
-                  <div class="mb-[10px] gap-2">
-                    <h1 class="text-blue-800 text-xl font-bold">
-                      Hotel Ibis
-                    </h1>
-                    <h5>
-                      Senen, Jakarta Pusat.
-                    </h5>
+              <!-- field password -->
+              <div class="container flex flex-col">
+                <label class="mb-[10px]" for="passworde">Password</label>
+                <div class="flex items-center gap-3 border-[1px] border-gray-600 p-[10px] rounded-[10px]">
+                  <svg class="ml-[10px]" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <path
+                      d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z" />
+                  </svg>
+                  <div class="w-full">
+                    <input class="focus:outline-none text-black py-[5px] px-[10px] w-full" type="text" name="password" id="password"
+                      placeholder="password123" />
                   </div>
-                  <!-- rating -->
-                  <div class="mb-[10px]">
-                    <div>⭐⭐⭐⭐</div>
-                  </div>
-                  <!-- harga -->
-                  <div class="flex gap-1 items-center md:text-sm">
-                    <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                    <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                  </div>
-                </a>
-
-                    <!-- card-2 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-
-                    <!-- card-3 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-
-                    <!-- card-4 -->
-                    <a href="#"
-                      class="w-[300px] bg-white border-[2px] border-blue-300 hover:border-[5px] hover:border-blue-400 px-[10px] pt-[10px] pb-[20px] rounded-[10px]">
-                      <img
-                        class="mb-[10px] rounded-t-[10px] w-full h-[200px] object-cover object-top md:object-cover md:object-top lg:object-cover lg:object-top xl-object-cover xl:object-top"
-                        src="../images/ibis1.jpg" alt="image-ibis">
-                      <div class="mb-[10px] gap-2">
-                        <h1 class="text-blue-800 text-xl font-bold">
-                          Hotel Ibis
-                        </h1>
-                        <h5>
-                          Senen, Jakarta Pusat.
-                        </h5>
-                      </div>
-                      <!-- rating -->
-                      <div class="mb-[10px]">
-                        <div>⭐⭐⭐⭐</div>
-                      </div>
-                      <div class="flex gap-3 items-center">
-                        <h1 class="text-red-600 font-bold">RP.500.000</h1>
-                        <h5 class="text-blue-800 font-bold">Per/Malam</h5>
-                      </div>
-                    </a>
-                    </div>
-                    </section>
-                    <!-- batas sesi card 3-->
-
-            <!-- report CS -->
-            <section
-              class="flex flex-col sm:flex-row sm:justify-center sm:items-center sm:gap-3 md:gap-3 gap-3 md:flex-row md:justify-center mb-[30px] items-center w-full">
-              <div>
-                <p>Laporkan kepada kami kendala anda.</p>
+                </div>
               </div>
-              <div>
-                <a class="border-[1px] border-black rounded-[10px] bg-red-600 text-white py-[5px] px-[10px]" href="#">Hubungi
-                  Kami</a>
+            </form>
+            <!-- button -->
+            <div class="w-full flex flex-col sm:flex sm:flex-row mt-[20px] mb-[50px] gap-2">
+              <button class="w-full border-[1px] border-black rounded-[10px] bg-blue-800 text-white py-[10px]">
+                Ubah Data
+              </button>
+
+              <button class="w-full border-[1px] border-black rounded-[10px] bg-blue-400 text-white py-[10px]">
+                Keluar Akun
+              </button>
               </div>
+              </div>
+        </div>
+        <!-- batas form profile -->
+
+        <!-- footer -->
+        <section class="container">
+          <div class="bg-blue-800 text-white mx-auto flex flex-col justify-center items-center pt-[20px] pb-[150px]">
+            <h1>Created By : FS-5</h1>
+            <h1>Adam , Rizki , Anand</h1>
+            </div>
             </section>
 
-            <!-- footer -->
-            <section class="container">
-              <div class="bg-blue-800 text-white mx-auto flex flex-col justify-center items-center pt-[20px] pb-[150px]">
-                <h1>Created By : FS-5</h1>
-                    <h1>Adam , Rizky , Anand</h1>
-                    </div>
-                    </section>
+        <!-- tab-bar harus di bawah-->
+        <div class="fixed w-full bottom-0 left-0 bg-blue-500">
+          <nav class="w-full sm:w-[500px] mx-auto p-[15px]">
+            <ul class="flex justify-between items-center">
+              <li>
+                <!--icon home-->
+                <a href="../pages/home.html" id="iconHome" class="gap-2 flex flex-col justify-center items-center text-white text-lg">
+                  <svg id="iconHome" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" class="fill-white text-2xl">
+                    <path
+                      d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                    />
+                  </svg>
+                  <p>Home</p>
+                </a>
+              </li>
 
+              <li>
+                <!--icon order book-->
+                <a href="../pages/tabOrder.html" id="iconOrderBook"
+                  class="gap-2 flex flex-col justify-center items-center text-white text-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="fill-white text-2xl">
+                    <path
+                      d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"
+                    />
+                  </svg>
+                  <p>Order list</p>
+                </a>
+              </li>
 
-            <!-- tab-bar harus di bawah-->
-            <div class="fixed w-full bottom-0 left-0 bg-blue-500">
-              <nav class="w-full sm:w-[500px] mx-auto p-[15px]">
-                <ul class="flex justify-between items-center">
-                  <li>
-                    <!--icon home-->
-                    <a href="../pages/home.html" id="iconHome"
-                                class="gap-2 flex flex-col justify-center items-center text-blue-800 text-lg">
-                                <svg id="iconHome" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"
-                                    class="fill-blue-800 text-2xl">
-                                    <path
-                                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
-                                </svg>
-                                <p>Home</p>
-                            </a>
-                        </li>
+              <li>
+                <!--icon saved-->
+                <a href="../pages/tabSaved.html" id="iconSaved"
+                  class="gap-2 flex flex-col justify-center items-center text-white text-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="fill-white text-2xl">
+                    <path
+                      d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
+                    />
+                  </svg>
+                  <p>Saved</p>
+                </a>
+              </li>
 
-                        <li>
-                          <!--icon order book-->
-                          <a href="../pages/tabOrder.html" id="iconOrderBook"
-                            class="gap-2 flex flex-col justify-center items-center text-white text-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="fill-white text-2xl">
-                              <path
-                                d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
-                            </svg>
-                            <p>Order list</p>
-                          </a>
-                        </li>
-
-                        <li>
-                          <!--icon saved-->
-                          <a href="../pages/tabSaved.html" id="iconSaved"
-                            class="gap-2 flex flex-col justify-center items-center text-white text-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="fill-white text-2xl">
-                              <path
-                                d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
-                            </svg>
-                            <p>Saved</p>
-                          </a>
-                        </li>
-
-                        <li>
-                          <!--icon profile-->
-                          <a href="../pages/tabProfile.html" id="iconProfile"
-                                class="gap-2 flex flex-col justify-center items-center text-white text-lg font-semibold">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
-                                    class="fill-white text-2xl">
-                                    <path
-                                        d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                                </svg>
-                                <p>Profile</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+              <li>
+                <!--icon profile-->
+                <a href="../pages/tabProfile.html" id="iconProfile"
+                  class="gap-2 flex flex-col justify-center items-center text-blue-800 text-lg font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="fill-blue-800 text-2xl">
+                    <path
+                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                    />
+                  </svg>
+                  <p>Profile</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </main>
     <!--batas container pembungkus-->
-</body>
-
+  </body>
 </html>

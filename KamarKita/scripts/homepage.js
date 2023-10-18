@@ -44,3 +44,34 @@ document.getElementById('headsetIcon').addEventListener('click', function() {
 document.getElementById('closePopup').addEventListener('click', function() {
   document.querySelector('.popup').style.display = 'none';
 });
+
+
+// scrolling 
+const btnHotel = document.getElementById('buttonHotel');
+const btnVilla = document.getElementById('buttonVilla');
+const btnKostan = document.getElementById('buttonKostan');
+
+btnHotel.addEventListener('click', () => {
+  // Dapatkan elemen card hotel
+  const cardHotel = document.querySelector('.card-hotel');
+
+  // Scroll ke elemen card hotel
+  cardHotel.scrollIntoView({ behavior: 'smooth' });
+});
+
+btnVilla.addEventListener('click', () => {
+  // Dapatkan elemen card villa
+  const cardVilla = document.querySelector('.card-villa');
+
+  // Scroll ke elemen card villa
+  cardVilla.scrollIntoView({ behavior: 'smooth' });
+});
+
+btnKostan.addEventListener('click', () => {
+  // Dapatkan elemen card kostan
+  const cardKostan = document.querySelector('.card-kostan');
+
+  // Scroll ke elemen card kostan
+  cardKostan.scrollIntoView({ behavior: 'smooth' });
+});
+
