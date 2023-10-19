@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7cec596d4d.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#2563EB',
+                        pressed: '#1E3A8A',
+                        mediumlow: '#9E9494',
+                    },
+                    fontFamily: {
+                        inter: ['Inter'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="flex  p-5 bg-white shadow-2xl  items-center fixed top-0 left-0 right-0 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="fill-main" height="1.6em"
+            viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+        </svg>
+        <div class=" text-main w-full text-center font-inter font-medium">
+            <h1>Pemesanan</h1>
+        </div>
+    </nav>
+    <main>
+        <div class="container mx-auto sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px]">
+            
+
+
+            <section class="mt-20">
+                <h1 class="text-center font-semibold text-lg">Silakan isi data pemesanan anda</h1>
+                <div class="mx-5 my-4">
+                    <div class="tanggal py-4">
+                        <label class="block">
+                            <span class=" block text-sm font-medium text-slate-700">
+                                Tanggal
+                            </span>
+                            <input type="date" name="date" id="tgl"
+                                class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 text-slate-400 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" />
+                        </label>
+                    </div>
+
+                    <div class="durasi py-4">
+                        <label class="block relative">
+                            <span class="block text-sm font-medium text-slate-700">
+                                Durasi
+                            </span>
+                            <div class="flex items-center mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    class="h-5 w-5  absolute left-3 pt-1" viewBox="0 0 512 512">
+                                    <path
+                                        d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
+                                </svg>
+                                <select name="input" id="hari"
+                                    class="mt-1 pl-8 pr-3 py-2 text-sm bg-white border text-slate-400 shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1">
+                                    <option value="" class="text-black" disabled selected hidden>
+                                        Berapa hari anda akan menginap
+                                    </option>
+                                    <option value="1" class="text-black">1 Hari</option>
+                                    <option value="2" class="text-black">2 Hari</option>
+                                    <option value="3" class="text-black">3 Hari</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+
+
+                    <div class="tamu py-4">
+                        <label class="block relative">
+                            <span class="block text-sm font-medium text-slate-700">
+                                Jumlah Tamu
+                            </span>
+                            <div class="flex items-center mt-1">
+                                <svg class="h-5 w-5 absolute left-3 pt-1" xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
+                                </svg>
+                                <select name="input" id="tamu"
+                                    class=" mt-1 pl-8 pr-3 py-2 text-sm bg-white border text-slate-400 shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1">
+                                    <option value="" class="text-black" disabled selected hidden>
+                                        Berapa orang dalam 1 kamar
+                                    </option>
+                                    <option value="1" class="text-black">1 Orang</option>
+                                    <option value="2" class="text-black">2 Orang</option>
+                                    <option value="3" class="text-black">3 Orang</option>
+                                    <option value="4" class="text-black">4 Orang</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="kamar py-4">
+                        <label class="block relative">
+                            <span class="block text-sm font-medium text-slate-700">
+                                Type kamar
+                            </span>
+                            <div class="flex items-center mt-1">
+                                <svg class="h-5 w-5 absolute left-3 pt-1" xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
+                                </svg>
+                                <select name="input" id="kamar"
+                                    class="mt-1 pl-8 pr-3 py-2 text-sm bg-white border text-slate-400 shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1">
+                                    <option value="" class="text-black" disabled selected hidden>
+                                        Pilih tipe kamar anda
+                                    </option>
+                                    <option value="1" class="text-black">1 Kasur kecil</option>
+                                    <option value="2" class="text-black">1 Kasur besar</option>
+                                    <option value="3" class="text-black">2 Kasur kecil</option>
+                                    <option value="3" class="text-black">2 Kasur besar</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="no-hp py-4">
+                        <label class="block relative">
+                            <span class="block text-sm font-medium text-slate-700">
+                                No Handphone
+                            </span>
+                            <div class="flex items-center mt-1">
+                                <input type="tel" name="phone" id="noHp"
+                                    class="mt-1 px-3 py-2 text-sm text-slate-400 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 pl-9 pr-2"
+                                    placeholder="Masukkan nomor handphone" />
+                                <svg class="h-5 w-5 p-1 absolute left-3" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="mt-2">
+                        <h3 class="text-sm font-inter text-slate-500">Mohon Perhatikan lagi pesanan anda,
+                            Supaya tidak ada kesalahan.</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="mx-4 my-8">
+                    <button onclick="submitdata()"
+                        class="w-full p-2 bg-blue-950 rounded-xl text-white mt-8">Pembayaran</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+      function validateForm() {
+            let tgl = document.getElementById("tgl").value;
+            let hari = document.getElementById("hari").value;
+            let tamu = document.getElementById("tamu").value;
+            let kamar = document.getElementById("kamar").value;
+            let noHp = document.getElementById("noHp").value;
+
+            if (tgl == "") {
+                alert('Masukkan tanggal terlebih dahulu');
+                return false;
+            }
+            if (hari == "") {
+                alert('Masukkan durasi menginap terlebih dahulu');
+                return false;
+            }
+            if (tamu == "") {
+                alert('Masukkan jumlah tamu terlebih dahulu');
+                return false;
+            }
+            if (kamar == "") {
+                alert('Masukkan tipe kamar terlebih dahulu');
+                return false;
+            }
+            if (noHp == "") {
+                alert('Masukkan nomor handphone terlebih dahulu');
+                return false;
+            }
+            return true;
+        }
+
+        function submitdata() {
+            if (validateForm()) {
+                let tgl = document.getElementById("tgl").value;
+                let hari = document.getElementById("hari").value;
+                let tamu = document.getElementById("tamu").value;
+                let kamar = document.getElementById("kamar").value;
+                let noHp = document.getElementById("noHp").value;
+
+                let menyimpanData = {
+                    tanggal: tgl,
+                    durasi: hari,
+                    jumlahTamu: tamu,
+                    typeKamar: kamar,
+                    noHp: noHp
+                };
+
+                // Mengonversi objek menjadi string JSON dan menyimpannya di local storage
+                localStorage.setItem("menyimpanData", JSON.stringify(menyimpanData));
+
+                window.location.href = "detail_pembayaran.html";
+            }
+        }
+    </script>
+</body>
+
+</html>
