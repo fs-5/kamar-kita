@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/7cec596d4d.js" crossorigin="anonymous"></script>
+    <script src="../scripts/konfirmasipembayaran.js"></script>
     <title>Document</title>
     <script>
         tailwind.config = {
@@ -26,7 +27,7 @@
             }
         }
     </script>
-</head>
+    </head>
 
 <body>
     <nav class="flex  p-5 bg-white shadow-2xl  items-center fixed top-0 left-0 right-0 z-50">
@@ -69,113 +70,48 @@
 
             <section class="fixed bottom-0 left-0 right-0 bg-white">
                 <div class="flex justify-center flex-col p-2 md:flex md:flex-row">
-                
 
                     <button onclick="showPopup('btnModal')"
-                    class="border-2 bg-pressed text-white p-1 w-full my-2 mx-auto rounded-xl md:mx-2 md:w-4/12 hover:bg-blue-950 active:bg-blue-950">
-                    <a href="#">Bayar Sekarang</a>
-                </button>
-                
-                <button onclick="showPopup('btnModalUbah')"
-                    class="border-2 bg-white text-white p-1 w-full my-2 mx-auto rounded-xl md:mx-2 md:w-4/12 hover:bg-gray-200 active:bg-gray-200">
-                    <a class="text-main" href="#">Ubah Metode Pembayaran</a>
-                </button>
-                
-                <div id="btnModal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden">
-                    <div class="w-80 p-4 h-2/4 rounded-md bg-white">
-                        <img src="/KamarKita/images/Group 33.png" alt="" style="margin-left: 4.5rem; margin-top: 1.8rem" />
-                        <h1 class="text-md flex justify-center font-bold text-indigo-800">Transaksi Anda Berhasil </h1>
-                        <div class="mt-5 mb-5">
-                            <button type="submit" onclick="btnPageHome()"
-                                class="border-1 border-blue-500 bg-indigo-800 text-white py-2 w-full rounded-md text">
-                                <i class="fa-solid fa-check"></i> Kembali ke Home
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="btnModalUbah" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden">
-                    <div class="w-80 p-4 h-2/4 rounded-md bg-white">
-                        <img src="/KamarKita/images/Group 33.png" alt="" style="margin-left: 4.5rem; margin-top: 1.8rem" />
-                        <h1 class="text-md flex justify-center font-bold text-indigo-800">Ubah Metode Pembayaran </h1>
-                        <div class="mt-5 mb-5">
-                            <button type="submit" onclick="btnPagePembayaran()"
-                                class="border-1 border-blue-500 bg-indigo-800 text-white py-2 w-full rounded-md text">
-                                <i class="fa-solid fa-check"></i> Kembali ke Pemesanan
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-            </section>
-        </div>
-    </main>
-    <script>
-         function showPopup(modalId) {
-        hideAllPopups();
-        let popup = document.getElementById(modalId);
-        popup.classList.remove("hidden");
-    }
-
-    function hideAllPopups() {
-        let modals = document.querySelectorAll('[id^="btnModal"]');
-        modals.forEach(modal => {
-            modal.classList.add("hidden");
-        });
-    }
-
-    function hidePopup() {
-        hideAllPopups();
-    }
-
-    function btnPageHome() {
-        window.location.href = "/KamarKita/pages/home.html";
-    }
-
-    function btnPagePembayaran() {
-        window.location.href = "/KamarKita/pemesanan.html";
-    }
-
-
-        // Membuat waktu berjalan
-
-        let countdownTime = 30 * 60;
-
-
-        function updateCountdown() {
-            let minutes = Math.floor(countdownTime / 60);
-            let seconds = countdownTime % 60;
-
-
-            let formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-
-            document.getElementById('countdown').innerHTML = `
-            <h1 class="text-5xl font-bold">${formattedTime}</h1>
-            <p class="py-4">Masa berlaku kode pembayaran tersisa</p>
-        `;
-        }
-        function startCountdown() {
-           
-            updateCountdown();
-
-            
-            let countdownInterval = setInterval(function () {
-                countdownTime--;
-
-               
-                if (countdownTime <= 0) {
-                    clearInterval(countdownInterval);
+                        class="border-2 bg-pressed text-white p-1 w-full my-2 mx-auto rounded-xl md:mx-2 md:w-4/12 hover:bg-blue-950 active:bg-blue-950">
+                        <a href="#">Bayar Sekarang</a>
+                    </button>
                     
-                } else {
-                    updateCountdown();
-                }
-            }, 1000);
-        }
+                    <button onclick="showPopup('btnModalUbah')"
+                        class="border-2 bg-white text-white p-1 w-full my-2 mx-auto rounded-xl md:mx-2 md:w-4/12 hover:bg-gray-200 active:bg-gray-200">
+                        <a class="text-main" href="#">Ubah Metode Pembayaran</a>
+                    </button>
+                    
+                    <div id="btnModal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden">
+                        <div class="w-80 p-4 h-2/4 rounded-md bg-white">
+                            <img src="/KamarKita/images/Group 33.png" alt="" style="margin-left: 4.5rem; margin-top: 1.8rem" />
+                            <h1 class="text-md flex justify-center font-bold text-indigo-800">Transaksi Anda Berhasil </h1>
+                            <div class="mt-5 mb-5">
+                                <button type="submit" onclick="btnPageHome()"
+                                    class="border-1 border-blue-500 bg-indigo-800 text-white py-2 w-full rounded-md text">
+                                    <i class="fa-solid fa-check"></i> Kembali ke Home
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="btnModalUbah" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden">
+                        <div class="w-80 p-4 h-2/4 rounded-md bg-white">
+                            <img src="/KamarKita/images/Group 33.png" alt="" style="margin-left: 4.5rem; margin-top: 1.8rem" />
+                            <h1 class="text-md flex justify-center font-bold text-indigo-800">Ubah Metode Pembayaran </h1>
+                            <div class="mt-5 mb-5">
+                                <button type="submit" onclick="btnPagePembayaran()"
+                                    class="border-1 border-blue-500 bg-indigo-800 text-white py-2 w-full rounded-md text">
+                                    <i class="fa-solid fa-check"></i> Kembali ke Pemesanan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-        
-        startCountdown();
-    </script>
+                </div>
+                </section>
+                </div>
+                </main>
+
 </body>
 
 </html>
