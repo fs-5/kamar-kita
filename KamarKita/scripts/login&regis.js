@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //Pop login
 
 function btnPageLogin() {
-  window.location.replace('home.html');
+  window.location.replace('tabHome.html');
 }
 
 // register
