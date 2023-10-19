@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (userName && password) {
       newUser(userName, password);
     } else {
-      alert('masukkan username/email dan password');
+      alert('masukkan username dan password');
     }
   });
 });
