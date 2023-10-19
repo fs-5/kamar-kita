@@ -1,20 +1,24 @@
 // login
 document.addEventListener('DOMContentLoaded', function () {
+  //memanggil url API
   const apiUrl = 'https://652a0f4f55b137ddc83f45fa.mockapi.io/Datauser';
 
   function newUser(userName, password) {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
+        // validasi login
         const newUser = data.find((newUser) => newUser.userName === userName && newUser.password === password);
         if (newUser) {
           btnModal.classList.remove('hidden');
         } else {
-          alert('Username/email atau password salah. Silahkan coba lagi');
+          alert('Username atau password salah. Silahkan coba lagi');
         }
       })
       .catch((error) => console.error('Error', error));
   }
+
+  //validasi jika formnya kosong
 
   document.getElementById('loginForm').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -29,8 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+//Pop login
+
 function btnPageLogin() {
-  window.location.replace('index.html');
+  window.location.replace('home.html');
 }
 
 // register
@@ -45,14 +51,14 @@ function btnRegis() {
 
   // Validasi input
   if (!userName || !email || !noHp || !password) {
-    document.getElementById('errorMessage').textContent = 'Semua kolom harus diisi';
+    alert('Mohon data harus di isi');
     return;
   }
   // Jika semua validasi berhasil, kirim permintaan dengan Fetch API
   let newUser = {
     userName: userName,
     email: email,
-    no: noHp,
+    noHp: noHp,
     password: password,
   };
 
@@ -65,18 +71,20 @@ function btnRegis() {
   })
     .then((response) => response.json())
     .then((result) => {
-      if (result.success) {
+      if (result) {
         // Registrasi berhasil, lakukan sesuatu (mungkin arahkan ke halaman selamat datang).
         modal.classList.remove('hidden');
       } else {
         // Registrasi gagal, tampilkan pesan kesalahan.
-        document.getElementById('errorMessage').textContent = result.message;
+        alert('Data yang di isi kurang lengkap');
       }
     })
     .catch((error) => {
       console.error('Error:', error);
     });
 }
+
+//Pop up register
 
 function btnPageRegis() {
   window.location.replace('login.html');
