@@ -21,7 +21,7 @@ window.location.href = "/KamarKita/pages/tabHome.html";
 }
 
 function btnPagePembayaran() {
-window.location.href = "/KamarKita/pemesanan.html";
+window.location.href = "/KamarKita/pages/pemesanan.html";
 }
 
 
